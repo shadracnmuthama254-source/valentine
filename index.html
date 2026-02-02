@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Valentine Surprise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .message {
+      display: none;
+      font-size: 1.8rem;
+      line-height: 1.4;
+    }
+    .signature {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+    .hint {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card" onclick="showMessage()">
+    <div class="hint" id="hint">
+      Click me
+    </div>
+    <div class="message" id="message">
+      Happy Valentine’s Day, baby ❤️<br/>
+      You mean the world to me.
+      <div class="signature">
+        — Shadrac Muthama
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("hint").style.display = "none";
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+</body>
+</html>
